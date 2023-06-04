@@ -20,15 +20,3 @@ data "aws_iam_policy_document" "iam_policy" {
   }
 
   }
-
-  statement {
-    actions = [
-      "s3:*",
-    ]
-
-    resources = [
-      "arn:aws:s3:::${var.s3_bucket_name}/home/&{aws:username}",
-      "arn:aws:s3:::${var.s3_bucket_name}/home/&{aws:username}/*",
-    ]
-  }
-}
