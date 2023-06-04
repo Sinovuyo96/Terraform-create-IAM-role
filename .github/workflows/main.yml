@@ -29,6 +29,7 @@ jobs:
 
       - name: Terraform Initialize Stage
         run: |
+          ls -la
           cd Terraform-create-IAM-role
           terraform init
       - name: Terraform Validate Stage
