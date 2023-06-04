@@ -30,19 +30,17 @@ jobs:
       - name: Terraform Initialize Stage
         run: |
           ls -la
-          cd Terraform-create-IAM-role
           terraform init
-      - name: Terraform Validate Stage
+     #   cd Terraform-create-IAM-role
+      - name: Terraform Validate & format Stage
         run: |
-          cd Terraform-create-IAM-role
           terraform validate
+          terraform fmt
       - name: Terraform Plan Stage
         run: |
-          cd Terraform-create-IAM-role
           terraform plan
       - name: Terraform Apply Stage
         run: |
-          cd terraform/infrastructure
           terraform apply -auto-approve
 #       - name: Terraform Destroy Stage
 #         run: |
